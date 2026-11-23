@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saathi Living · Co-living, PG and student rooms in Bengaluru</title>
+  <meta name="description" content="Fully furnished co-living, PG and student rooms in Koramangala, HSR Layout, Whitefield and Manyata. Meals, Wi-Fi, housekeeping and laundry in one monthly rent." />
+  <meta name="theme-color" content="#16302B" />
+  <meta property="og:title" content="Saathi Living · Co-living and PG rooms in Bengaluru" />
+  <meta property="og:description" content="Move in with one bag. Meals, Wi-Fi, housekeeping and laundry in one monthly rent." />
+  <meta property="og:image" content="/assets/img/room-private.jpg" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/assets/video/hero-poster.jpg" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="is-loading">
+
+  <!-- Loader: two doors swing open -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__door loader__door--l"><span class="loader__knob"></span></div>
+    <div class="loader__door loader__door--r"><span class="loader__knob"></span></div>
+    <div class="loader__center">
+      <svg class="loader__mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 58V30a22 22 0 0 1 44 0v28" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="32" cy="40" r="4" fill="currentColor"/></svg>
+      <p class="loader__text">Unlocking your room <span id="loaderPct">0</span>%</p>
+    </div>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__logo" href="#top" aria-label="Saathi Living home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 58V30a22 22 0 0 1 44 0v28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="40" r="5" fill="currentColor"/></svg>
+      <span>Saathi<em>Living</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#rooms">Rooms</a>
+      <a href="#house">Inside a house</a>
+      <a href="#rent">What's included</a>
+      <a href="#locations">Locations</a>
+      <a href="#parents">For parents</a>
+    </nav>
+    <a class="btn btn--sun nav__cta" href="#visit">Book a visit</a>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+  </header>
+
+  <div class="mmenu" id="mobileMenu" hidden>
+    <a href="#rooms">Rooms</a>
+    <a href="#house">Inside a house</a>
+    <a href="#rent">What's included</a>
+    <a href="#locations">Locations</a>
+    <a href="#parents">For parents</a>
+    <a href="#visit" class="btn btn--sun">Book a visit</a>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO: arch window that opens into the room -->
+    <section class="hero" id="top">
+      <div class="hero__pin">
+        <div class="hero__copy">
+          <p class="hero__kicker"><span class="dot"></span> 38 beds open for January</p>
+          <h1 class="hero__title">
+            <span class="line"><span>Move in with</span></span>
+            <span class="line"><span>one bag.</span></span>
+            <span class="line"><span class="soft">We've done the rest.</span></span>
+          </h1>
+          <p class="hero__lede">Furnished co-living and PG rooms for students and working professionals across Bengaluru. Meals, Wi-Fi, housekeeping and laundry come in one monthly rent.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--ink" href="#visit">Book a visit</a>
+            <a class="btn btn--line" href="#rooms">See rooms and prices</a>
+          </div>
+        </div>
+
+        <div class="hero__arch" id="heroArch">
+          <video class="hero__video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="/assets/video/hero-poster.jpg">
+            <source src="/assets/video/hero.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__chip hero__chip--a">Breakfast and dinner, daily</div>
+          <div class="hero__chip hero__chip--b">200 Mbps Wi-Fi</div>
+          <p class="hero__caption" id="heroCaption">A private room at our HSR house, 7:40 on a weekday.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Neighbourhood marquee -->
+    <section class="marquee" aria-label="Neighbourhoods we're in">
+      <div class="marquee__track">
+        <span>Koramangala</span><i></i><span>HSR Layout</span><i></i><span>Whitefield</span><i></i><span>Manyata Tech Park</span><i></i><span>Electronic City</span><i></i><span>Near Christ University</span><i></i>
+        <span>Koramangala</span><i></i><span>HSR Layout</span><i></i><span>Whitefield</span><i></i><span>Manyata Tech Park</span><i></i><span>Electronic City</span><i></i><span>Near Christ University</span><i></i>
+      </div>
+    </section>
+
+    <!-- WHO -->
+    <section class="who" id="who">
+      <div class="wrap who__grid">
+        <h2 class="h2 who__title">Built for the first few years in a new city.</h2>
+        <div class="who__tabs" role="tablist" aria-label="Who lives here">
+          <button role="tab" aria-selected="true" aria-controls="who-panel" data-who="0">Students</button>
+          <button role="tab" aria-selected="false" aria-controls="who-panel" data-who="1">Working professionals</button>
+          <button role="tab" aria-selected="false" aria-controls="who-panel" data-who="2">Interns, 2 to 6 months</button>
+        </div>
+        <div class="who__panel" id="who-panel" role="tabpanel">
+          <div class="who__media tilt">
+            <img class="who__img is-on" src="/assets/img/common-hall.jpg" alt="Bright common room with sofas and a rug" width="1920" height="1280" loading="lazy" decoding="async" />
+            <img class="who__img" src="/assets/img/cowork.jpg" alt="Shared work area with long desks and ergonomic chairs" width="1920" height="1280" loading="lazy" decoding="async" />
+            <img class="who__img" src="/assets/img/brick-lounge.jpg" alt="Lounge with a leather sofa, plants and exposed brick" width="1920" height="1280" loading="lazy" decoding="async" />
+          </div>
+          <div class="who__text">
+            <div class="who__item is-on">
+              <p class="who__big">Quiet hours from 11 pm, study desks in every room and a shuttle to campus at 8:15.</p>
+              <p>Houses near Christ University, Jain and St. Joseph's. Parents get a monthly check-in call if they ask for one.</p>
+            </div>
+            <div class="who__item">
+              <p class="who__big">Ten minutes to the tech park, a work lounge with backup power, and dinner kept warm till 11.</p>
+              <p>Pay monthly on UPI, get a rent receipt for HRA, and switch houses if your office moves.</p>
+            </div>
+            <div class="who__item">
+              <p class="who__big">Stay for one month or six. Move in tomorrow with a 15-day deposit.</p>
+              <p>No lock-in on intern stays. Bring a laptop and a bag; sheets, towels and a cupboard are waiting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROOMS: horizontal 3D reel -->
+    <section class="rooms" id="rooms">
+      <div class="rooms__pin">
+        <div class="rooms__head wrap">
+          <h2 class="h2">Pick a room. The rent covers the rest.</h2>
+          <p class="rooms__hint"><span class="only-d">Scroll</span><span class="only-m">Swipe</span> to browse <span class="rooms__count"><b id="roomIdx">1</b> of 5</span></p>
+        </div>
+        <div class="rooms__track" id="roomsTrack">
+          <article class="room">
+            <div class="room__img"><img src="/assets/img/room-private.jpg" alt="Private room with a bed, white desk, monitor and wardrobe" width="1920" height="1280" loading="lazy" decoding="async" /></div>
+            <div class="room__body">
+              <h3>Private room</h3>
+              <p class="room__price">from <b>₹18,500</b> a month</p>
+              <p>Your own room with a work desk, ergonomic chair, wardrobe and attached bathroom.</p>
+              <ul class="room__tags"><li>Attached bath</li><li>AC</li><li>Work desk</li></ul>
+            </div>
+          </article>
+          <article class="room">
+            <div class="room__img"><img src="/assets/img/room-single.jpg" alt="Single bed by a tall window with white curtains and a reading lamp" width="1920" height="1280" loading="lazy" decoding="async" /></div>
+            <div class="room__body">
+              <h3>Single room, women's floor</h3>
+              <p class="room__price">from <b>₹15,500</b> a month</p>
+              <p>A calm single on a women-only floor with its own entry log and a warden on the same floor.</p>
+              <ul class="room__tags"><li>Women-only floor</li><li>Big window</li><li>Shared bath for 2</li></ul>
+            </div>
+          </article>
+          <article class="room">
+            <div class="room__img"><img src="/assets/img/room-twin.jpg" alt="Shared room with bunk beds, lockers and curtains" width="1920" height="1086" loading="lazy" decoding="async" /></div>
+            <div class="room__body">
+              <h3>Triple sharing</h3>
+              <p class="room__price">from <b>₹8,900</b> a month</p>
+              <p>Bunks with privacy curtains, a personal locker and reading light for each bed. Our most booked room for students.</p>
+              <ul class="room__tags"><li>Personal locker</li><li>Curtained bunks</li><li>Fan + AC</li></ul>
+            </div>
+          </article>
+          <article class="room">
+            <div class="room__img"><img src="/assets/img/room-studio.jpg" alt="Studio with a sofa, TV wall and a balcony" width="1920" height="1280" loading="lazy" decoding="async" /></div>
+            <div class="room__body">
+              <h3>Studio with balcony</h3>
+              <p class="room__price">from <b>₹26,000</b> a month</p>
+              <p>A living area, kitchenette and balcony of your own, with every common space still open to you.</p>
+              <ul class="room__tags"><li>Kitchenette</li><li>Balcony</li><li>Smart TV</li></ul>
+            </div>
+          </article>
+          <article class="room room--ask">
+            <div class="room__ask">
+              <h3>Not sure which one fits?</h3>
+              <p>Tell us your budget and where you study or work. We'll shortlist two rooms and hold them for 48 hours, free.</p>
+              <a class="btn btn--sun" href="#visit">Get a shortlist</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOUSE: exploded isometric building -->
+    <section class="house" id="house">
+      <div class="house__pin wrap">
+        <div class="house__text">
+          <div class="house__eyebrow">Architectural Layout</div>
+          <h2 class="h2">Five floors, one front door.</h2>
+          <p class="house__lede">Every Saathi house is laid out the same way, so you know where everything is from day one.</p>
+          <ol class="floors" id="floorList" role="tablist" aria-label="Building Floors">
+            <li class="floor-item is-on" data-floor="4" role="tab" tabindex="0" aria-selected="true">
+              <span class="floor-item__badge">4F</span>
+              <div class="floor-item__content">
+                <div class="floor-item__title-row">
+                  <b>Terrace & Sky Lounge</b>
+                  <span class="floor-item__pill">Top Floor</span>
+                </div>
+                <span class="floor-item__desc">Chai corner, sunset seating and the best view of the evening sky.</span>
+                <div class="floor-item__tags">
+                  <span>Sunset View</span>
+                  <span>Chai Corner</span>
+                  <span>Acoustic Jams</span>
+                </div>
+              </div>
+              <span class="floor-item__indicator" aria-hidden="true"></span>
+            </li>
+            <li class="floor-item" data-floor="3" role="tab" tabindex="0" aria-selected="false">
+              <span class="floor-item__badge">3F</span>
+              <div class="floor-item__content">
+                <div class="floor-item__title-row">
+                  <b>Private & Studio Rooms</b>
+                  <span class="floor-item__pill">Quiet Zone</span>
+                </div>
+                <span class="floor-item__desc">Single rooms with dedicated desks, attached baths & floor pantry.</span>
+                <div class="floor-item__tags">
+                  <span>Ensuite Bath</span>
+                  <span>Study Desk</span>
+                  <span>Mini Pantry</span>
+                </div>
+              </div>
+              <span class="floor-item__indicator" aria-hidden="true"></span>
+            </li>
+            <li class="floor-item" data-floor="2" role="tab" tabindex="0" aria-selected="false">
+              <span class="floor-item__badge">2F</span>
+              <div class="floor-item__content">
+                <div class="floor-item__title-row">
+                  <b>Twin Sharing & Women's Wing</b>
+                  <span class="floor-item__pill">Secure Access</span>
+                </div>
+                <span class="floor-item__desc">Spacious sharing rooms with dedicated wardrobes and biometric safety.</span>
+                <div class="floor-item__tags">
+                  <span>Keycard Entry</span>
+                  <span>Twin Wardrobes</span>
+                  <span>Balcony Views</span>
+                </div>
+              </div>
+              <span class="floor-item__indicator" aria-hidden="true"></span>
+            </li>
+            <li class="floor-item" data-floor="1" role="tab" tabindex="0" aria-selected="false">
+              <span class="floor-item__badge">1F</span>
+              <div class="floor-item__content">
+                <div class="floor-item__title-row">
+                  <b>Lounge & Community Kitchen</b>
+                  <span class="floor-item__pill">Social Hub</span>
+                </div>
+                <span class="floor-item__desc">Long dining table, work lounge, 4K TV corner and lush indoor plants.</span>
+                <div class="floor-item__tags">
+                  <span>Open Kitchen</span>
+                  <span>Work Lounge</span>
+                  <span>Co-working Pods</span>
+                </div>
+              </div>
+              <span class="floor-item__indicator" aria-hidden="true"></span>
+            </li>
+            <li class="floor-item" data-floor="0" role="tab" tabindex="0" aria-selected="false">
+              <span class="floor-item__badge">GF</span>
+              <div class="floor-item__content">
+                <div class="floor-item__title-row">
+                  <b>Reception & Laundry Suite</b>
+                  <span class="floor-item__pill">Arrivals</span>
+                </div>
+                <span class="floor-item__desc">Biometric check-in, 24/7 security, washers, dryers & parcel hub.</span>
+                <div class="floor-item__tags">
+                  <span>Biometric Entry</span>
+                  <span>Speed Washers</span>
+                  <span>Parcel Lockers</span>
+                </div>
+              </div>
+              <span class="floor-item__indicator" aria-hidden="true"></span>
+            </li>
+          </ol>
+        </div>
+        <div class="house__stage">
+          <div class="house__backdrop" aria-hidden="true"></div>
+          <div class="iso" id="iso">
+            <div class="slab" data-floor="0" role="button" tabindex="0" aria-label="Ground Floor: Reception and Laundry">
+              <div class="slab__card">
+                <div class="slab__photo" style="background-image: url(/assets/img/laundry.jpg)"></div>
+                <div class="slab__overlay"></div>
+                <div class="slab__tag">
+                  <span class="slab__badge">GF</span>
+                  <span class="slab__title">Reception & Laundry</span>
+                </div>
+              </div>
+            </div>
+            <div class="slab" data-floor="1" role="button" tabindex="0" aria-label="Floor 1: Lounge and Kitchen">
+              <div class="slab__card">
+                <div class="slab__photo" style="background-image: url(/assets/img/garden-lounge.jpg)"></div>
+                <div class="slab__overlay"></div>
+                <div class="slab__tag">
+                  <span class="slab__badge">1F</span>
+                  <span class="slab__title">Lounge & Kitchen</span>
+                </div>
+              </div>
+            </div>
+            <div class="slab" data-floor="2" role="button" tabindex="0" aria-label="Floor 2: Twin Sharing">
+              <div class="slab__card">
+                <div class="slab__photo" style="background-image: url(/assets/img/room-twin.jpg)"></div>
+                <div class="slab__overlay"></div>
+                <div class="slab__tag">
+                  <span class="slab__badge">2F</span>
+                  <span class="slab__title">Twin Sharing</span>
+                </div>
+              </div>
+            </div>
+            <div class="slab" data-floor="3" role="button" tabindex="0" aria-label="Floor 3: Private Rooms">
+              <div class="slab__card">
+                <div class="slab__photo" style="background-image: url(/assets/img/room-private.jpg)"></div>
+                <div class="slab__overlay"></div>
+                <div class="slab__tag">
+                  <span class="slab__badge">3F</span>
+                  <span class="slab__title">Private Living</span>
+                </div>
+              </div>
+            </div>
+            <div class="slab is-on" data-floor="4" role="button" tabindex="0" aria-label="Floor 4: Terrace">
+              <div class="slab__card">
+                <div class="slab__photo" style="background-image: url(/assets/img/cityview.jpg)"></div>
+                <div class="slab__overlay"></div>
+                <div class="slab__tag">
+                  <span class="slab__badge">4F</span>
+                  <span class="slab__title">Terrace & Sky</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="house__hint">
+            <span class="house__hint-dot"></span>
+            <span>Hover or click any floor to inspect</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RENT: receipt -->
+    <section class="rent" id="rent">
+      <div class="wrap rent__grid">
+        <div class="rent__copy">
+          <h2 class="h2">One rent. No surprise bills at the end of the month.</h2>
+          <p>Most PGs quote low and add electricity, food and laundry later. Our rent already has them in it. This is what a private room at HSR includes.</p>
+          <div class="rent__photos">
+            <img class="rent__ph rent__ph--a" src="/assets/img/kitchen.jpg" alt="Clean white kitchen with bar stools" width="1920" height="1276" loading="lazy" decoding="async" />
+            <img class="rent__ph rent__ph--b" src="/assets/img/laundry.jpg" alt="Row of washing machines in the laundry room" width="1920" height="1080" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="receipt-wrap">
+          <div class="receipt" id="receipt">
+            <div class="receipt__head">
+              <p class="receipt__brand">Saathi Living, HSR</p>
+              <p class="receipt__meta">Private room, monthly</p>
+            </div>
+            <ul class="receipt__lines">
+              <li><span>Room with attached bath</span><b>₹18,500</b></li>
+              <li><span>Breakfast and dinner, 7 days</span><b>Included</b></li>
+              <li><span>200 Mbps Wi-Fi</span><b>Included</b></li>
+              <li><span>Room cleaning, 6 days a week</span><b>Included</b></li>
+              <li><span>Laundry, 2 loads a week</span><b>Included</b></li>
+              <li><span>Electricity and power backup</span><b>Included</b></li>
+              <li><span>RO water and hot water</span><b>Included</b></li>
+              <li><span>Security, CCTV and warden</span><b>Included</b></li>
+              <li><span>Maintenance and repairs</span><b>Included</b></li>
+            </ul>
+            <div class="receipt__total"><span>You pay</span><b id="rentTotal">₹18,500</b></div>
+            <p class="receipt__foot">Deposit: one month's rent, refunded within 7 days of moving out.</p>
+            <div class="receipt__stamp">All in</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAY: sticky timeline -->
+    <section class="day" id="day">
+      <div class="wrap day__grid">
+        <div class="day__steps">
+          <h2 class="h2">A weekday at a Saathi house.</h2>
+          <div class="step is-on" data-step="0">
+            <time>7:30 am</time>
+            <h3>Breakfast at the long table</h3>
+            <p>Idli, poha or eggs, plus filter coffee. Packed boxes for anyone with an early class.</p>
+            <img class="step__mimg" src="/assets/img/breakfast.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async" />
+          </div>
+          <div class="step" data-step="1">
+            <time>9:15 am</time>
+            <h3>Shuttle out, or the work lounge</h3>
+            <p>A shuttle runs to the nearest tech park and campus. Working from home? The lounge has backup power and quiet desks.</p>
+            <img class="step__mimg" src="/assets/img/plant.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
+          </div>
+          <div class="step" data-step="2">
+            <time>2:00 pm</time>
+            <h3>Rooms get cleaned while you're out</h3>
+            <p>Beds made, bins emptied, floors mopped. Laundry comes back folded on Tuesdays and Fridays.</p>
+            <img class="step__mimg" src="/assets/img/room-private.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async" />
+          </div>
+          <div class="step" data-step="3">
+            <time>8:00 pm</time>
+            <h3>Dinner, and whatever match is on</h3>
+            <p>Two veg and one non-veg dish every night. Somebody always has the cricket on in the lounge.</p>
+            <img class="step__mimg" src="/assets/img/lounge.jpg" alt="" width="1920" height="1281" loading="lazy" decoding="async" />
+          </div>
+          <div class="step" data-step="4">
+            <time>10:30 pm</time>
+            <h3>Terrace, chai, city lights</h3>
+            <p>The terrace stays open till midnight. Quiet hours start at 11 on the room floors.</p>
+            <img class="step__mimg" src="/assets/img/bengaluru-night.jpg" alt="" width="1920" height="1272" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="day__frame" aria-hidden="true">
+          <div class="day__arch">
+            <img class="day__img is-on" src="/assets/img/breakfast.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async" />
+            <img class="day__img" src="/assets/img/plant.jpg" alt="" width="1920" height="1080" loading="lazy" decoding="async" />
+            <img class="day__img" src="/assets/img/room-private.jpg" alt="" width="1920" height="1280" loading="lazy" decoding="async" />
+            <img class="day__img" src="/assets/img/lounge.jpg" alt="" width="1920" height="1281" loading="lazy" decoding="async" />
+            <img class="day__img" src="/assets/img/bengaluru-night.jpg" alt="" width="1920" height="1272" loading="lazy" decoding="async" />
+          </div>
+          <div class="day__clock"><span id="dayClock">7:30 am</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILM: kitchen video band -->
+    <section class="film" id="film">
+      <div class="film__frame" id="filmFrame">
+        <video class="film__video" muted loop playsinline preload="none" poster="/assets/video/kitchen-poster.jpg" data-lazy-video>
+          <source data-src="/assets/video/kitchen.mp4" type="video/mp4" />
+        </video>
+        <div class="film__shade"></div>
+        <p class="film__quote">Kitchens are cleaned twice a day. You only need to show up hungry.</p>
+      </div>
+    </section>
+
+    <!-- SPACES gallery -->
+    <section class="spaces" id="spaces">
+      <div class="wrap">
+        <div class="spaces__head">
+          <h2 class="h2">The rooms you'll share.</h2>
+          <p>Common spaces are cleaned every day and stay open till midnight.</p>
+        </div>
+        <div class="gallery">
+          <figure class="g g--tall"><div class="g__in"><img src="/assets/img/garden-lounge.jpg" alt="Lounge full of plants with dining tables and a TV" width="1920" height="1446" loading="lazy" decoding="async" /></div><figcaption>Garden lounge, Koramangala</figcaption></figure>
+          <figure class="g"><div class="g__in"><img src="/assets/img/kitchen.jpg" alt="White kitchen with pendant lights and bar stools" width="1920" height="1276" loading="lazy" decoding="async" /></div><figcaption>Kitchen and pantry, HSR</figcaption></figure>
+          <figure class="g"><div class="g__in"><img src="/assets/img/cowork.jpg" alt="Work lounge with desks and chairs" width="1920" height="1280" loading="lazy" decoding="async" /></div><figcaption>Work lounge, Whitefield</figcaption></figure>
+          <figure class="g g--wide"><div class="g__in"><img src="/assets/img/brick-lounge.jpg" alt="Brick-walled lounge with leather sofa and plants" width="1920" height="1280" loading="lazy" decoding="async" /></div><figcaption>TV room, Manyata</figcaption></figure>
+          <figure class="g"><div class="g__in"><img src="/assets/img/cityview.jpg" alt="Armchair by a window with a city view" width="1920" height="1280" loading="lazy" decoding="async" /></div><figcaption>Reading corner, 4th floor</figcaption></figure>
+          <figure class="g"><div class="g__in"><img src="/assets/img/lounge.jpg" alt="Living room with a blue sofa and big windows" width="1920" height="1281" loading="lazy" decoding="async" /></div><figcaption>Sofa lounge, HSR</figcaption></figure>
+          <figure class="g"><div class="g__in"><img src="/assets/img/laundry.jpg" alt="Laundry room with rows of washers and dryers" width="1920" height="1080" loading="lazy" decoding="async" /></div><figcaption>Laundry room, every house</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="locations" id="locations">
+      <div class="wrap">
+        <h2 class="h2">Four houses, close to where you'll spend your day.</h2>
+        <ul class="loc" id="locList">
+          <li class="loc__row" data-img="/assets/img/garden-lounge.jpg">
+            <span class="loc__name">Koramangala 5th Block</span>
+            <span class="loc__near">6 min to Christ University, 12 min to Forum</span>
+            <span class="loc__left">9 beds left</span>
+            <span class="loc__price">from ₹9,400</span>
+          </li>
+          <li class="loc__row" data-img="/assets/img/room-private.jpg">
+            <span class="loc__name">HSR Layout Sector 2</span>
+            <span class="loc__near">10 min to Agara, shuttle to ORR offices</span>
+            <span class="loc__left">14 beds left</span>
+            <span class="loc__price">from ₹8,900</span>
+          </li>
+          <li class="loc__row" data-img="/assets/img/cowork.jpg">
+            <span class="loc__name">Whitefield, near ITPL</span>
+            <span class="loc__near">Walk to ITPL, 8 min to Phoenix Marketcity</span>
+            <span class="loc__left">11 beds left</span>
+            <span class="loc__price">from ₹10,200</span>
+          </li>
+          <li class="loc__row" data-img="/assets/img/brick-lounge.jpg">
+            <span class="loc__name">Manyata, Nagawara</span>
+            <span class="loc__near">5 min to Manyata Tech Park gate 2</span>
+            <span class="loc__left">4 beds left</span>
+            <span class="loc__price">from ₹9,800</span>
+          </li>
+        </ul>
+        <div class="loc__float" id="locFloat" aria-hidden="true"><img alt="" /></div>
+      </div>
+    </section>
+
+    <!-- PARENTS -->
+    <section class="parents" id="parents">
+      <div class="wrap parents__grid">
+        <div class="parents__media">
+          <img src="/assets/img/balcony.jpg" alt="Resident relaxing on a balcony in the evening" width="1920" height="1280" loading="lazy" decoding="async" />
+        </div>
+        <div class="parents__copy">
+          <h2 class="h2">For parents sending someone to Bengaluru.</h2>
+          <p class="parents__lede">You'll want to know who's at the gate at midnight. Here's how each house is run.</p>
+          <dl class="safe">
+            <div><dt>Biometric entry</dt><dd>Only residents get in. Every guest is signed in at the desk with an ID.</dd></div>
+            <div><dt>A warden on site, 24 hours</dt><dd>Plus a security guard at the gate and CCTV on every common floor.</dd></div>
+            <div><dt>Separate women's floors</dt><dd>With their own entry log and a woman warden.</dd></div>
+            <div><dt>A doctor on call</dt><dd>Tie-up with a clinic within 2 km, and a first-aid kit on every floor.</dd></div>
+            <div><dt>Updates if you want them</dt><dd>A monthly call from the house manager, and the number to reach them any time.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="wrap faq__grid">
+        <h2 class="h2">Questions people ask on the visit.</h2>
+        <div class="faq__list">
+          <details><summary>How much is the deposit, and when do I get it back?</summary><p>One month's rent for long stays, 15 days for interns. It comes back to your account within 7 days of moving out, minus any damage we've shown you in photos.</p></details>
+          <details><summary>Is there a lock-in period?</summary><p>Three months for long stays, none for intern stays. After that, give us 30 days' notice.</p></details>
+          <details><summary>Is the food veg or non-veg?</summary><p>Both. Every meal has a veg option, and non-veg is served on separate days and counters. Tell us about allergies and the kitchen plans around them.</p></details>
+          <details><summary>Can friends or family visit?</summary><p>Yes, in the lounge between 9 am and 9 pm, signed in at the desk. Parents can stay over in a guest room if one is free.</p></details>
+          <details><summary>What do I need to move in?</summary><p>A government ID, a college or office ID, and a passport photo. You can finish the paperwork online before you arrive.</p></details>
+          <details><summary>Can I switch rooms or houses later?</summary><p>Yes. If your office or college changes, you can move to another Saathi house with the same deposit.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit">
+      <video class="visit__video" muted loop playsinline preload="none" poster="/assets/video/rain-poster.jpg" data-lazy-video aria-hidden="true">
+        <source data-src="/assets/video/rain.mp4" type="video/mp4" />
+      </video>
+      <div class="visit__shade"></div>
+      <div class="wrap visit__grid">
+        <div class="visit__copy">
+          <h2 class="visit__title">See the room before you decide.</h2>
+          <p>Visits take 20 minutes. You'll see the room, eat a meal with us if it's lunchtime, and meet the house manager.</p>
+          <a class="btn btn--line-light" id="waLink" href="https://wa.me/919000000000?text=Hi%20Saathi%20Living%2C%20I%27d%20like%20to%20visit%20a%20room." target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+        <form class="form" id="visitForm" novalidate>
+          <h3>Book a visit</h3>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required />
+            <p class="field__err" id="err-name">Enter your name so we know who to ask for.</p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Phone number</label>
+            <input id="f-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile" required />
+            <p class="field__err" id="err-phone">Enter a 10-digit mobile number. We'll call this to confirm your visit time.</p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-area">House</label>
+              <select id="f-area" name="area">
+                <option>Koramangala</option><option>HSR Layout</option><option>Whitefield</option><option>Manyata</option><option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-room">Room</label>
+              <select id="f-room" name="room">
+                <option>Private room</option><option>Single, women's floor</option><option>Triple sharing</option><option>Studio</option><option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-date">When would you like to visit?</label>
+            <input id="f-date" name="date" type="date" required />
+            <p class="field__err" id="err-date">Pick a date from today onwards.</p>
+          </div>
+          <button class="btn btn--sun btn--full" type="submit">Request visit</button>
+          <p class="form__ok" id="formOk" role="status" hidden>Visit requested. We'll call you within 2 hours to confirm a time.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div>
+        <a class="nav__logo nav__logo--light" href="#top">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 58V30a22 22 0 0 1 44 0v28" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="40" r="5" fill="currentColor"/></svg>
+          <span>Saathi<em>Living</em></span>
+        </a>
+        <p class="foot__about">Co-living, PG and student rooms in Bengaluru.</p>
+      </div>
+      <div>
+        <h4>Houses</h4>
+        <ul><li>Koramangala</li><li>HSR Layout</li><li>Whitefield</li><li>Manyata</li></ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <ul><li><a href="tel:+919000000000">+91 90000 00000</a></li><li><a href="mailto:hello@saathiliving.in">hello@saathiliving.in</a></li><li>Daily, 9 am to 9 pm</li></ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul><li><a href="#visit">Book a visit</a></li><li><a href="#faq">FAQs</a></li><li><a href="/CREDITS.md">Photo credits</a></li></ul>
+      </div>
+    </div>
+    <div class="wrap foot__base"><span>© 2026 Saathi Living</span><span>Bengaluru, Karnataka</span></div>
+  </footer>
+
+  <script src="/js/vendor/gsap.min.js" defer></script>
+  <script src="/js/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="/js/vendor/lenis.min.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
