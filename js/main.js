@@ -308,112 +308,60 @@
     return () => track.removeEventListener('scroll', onSwipe);
   });
 
-  // House: exploded building
-  const slabs = $$('.slab');
-  const floorsLi = $$('#floorList li');
-  const iso = $('#iso');
-  let curFloor = 4;
-  let isScrollingProgrammatically = false;
+  // House: Architectural Floor Showcase
+  const floorItems = $$('#floorList .floor-item');
+  const slides = $$('.house__slide');
+  const levelBtns = $$('.house__level');
+  let activeFloor = 4;
 
-  function updateSlabs(f) {
-    const gap = isDesktop() ? 72 : 46;
-    const lift = isDesktop() ? 38 : 22;
+  function switchFloor(f) {
+    if (activeFloor === f) return;
+    activeFloor = f;
 
-    slabs.forEach((slab) => {
-      const fl = +slab.dataset.floor;
-      const isActive = fl === f;
-      const isAbove = fl > f;
-      let targetZ = fl * gap;
-      if (isActive || isAbove) {
-        targetZ += lift;
-      }
-      slab.classList.toggle('is-on', isActive);
-      if (hasGsap) {
-        gsap.to(slab, {
-          z: targetZ,
-          scale: isActive ? 1.03 : 1,
-          duration: 0.45,
-          ease: 'power2.out',
-          overwrite: 'auto'
-        });
-      }
+    // Update left floor items
+    floorItems.forEach((item) => {
+      const match = +item.dataset.floor === f;
+      item.classList.toggle('is-on', match);
+      item.setAttribute('aria-selected', match ? 'true' : 'false');
+    });
+
+    // Update showcase slides
+    slides.forEach((slide) => {
+      const match = +slide.dataset.floor === f;
+      slide.classList.toggle('is-active', match);
+    });
+
+    // Update vertical level strip buttons
+    levelBtns.forEach((btn) => {
+      const match = +btn.dataset.floor === f;
+      btn.classList.toggle('is-active', match);
     });
   }
 
-  function setFloor(f, fromScroll = false) {
-    if (curFloor === f && !fromScroll) return;
-    curFloor = f;
-
-    floorsLi.forEach((li) => {
-      const match = +li.dataset.floor === f;
-      li.classList.toggle('is-on', match);
-      li.setAttribute('aria-selected', match ? 'true' : 'false');
-    });
-
-    updateSlabs(f);
-  }
-
-  // Initial positioning
-  updateSlabs(4);
-
-  let houseST = null;
-
-  // Interaction handlers for floor items (left) and slabs (right)
-  floorsLi.forEach((li) => {
-    const f = +li.dataset.floor;
-    li.addEventListener('click', () => {
-      setFloor(f);
-      if (houseST && houseST.pin && isDesktop()) {
-        isScrollingProgrammatically = true;
-        const progress = (4 - f) / 4;
-        const targetScroll = houseST.start + progress * (houseST.end - houseST.start);
-        if (lenis) {
-          lenis.scrollTo(targetScroll, {
-            duration: 0.6,
-            onComplete: () => { isScrollingProgrammatically = false; }
-          });
-        } else {
-          window.scrollTo({ top: targetScroll, behavior: 'smooth' });
-          setTimeout(() => { isScrollingProgrammatically = false; }, 600);
-        }
-      }
-    });
-    li.addEventListener('mouseenter', () => {
-      if (!isScrollingProgrammatically) setFloor(f);
-    });
-    li.addEventListener('keydown', (e) => {
+  // Interactive events for floor items
+  floorItems.forEach((item) => {
+    const f = +item.dataset.floor;
+    item.addEventListener('click', () => switchFloor(f));
+    item.addEventListener('mouseenter', () => switchFloor(f));
+    item.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        li.click();
+        switchFloor(f);
       }
     });
   });
 
-  slabs.forEach((slab) => {
-    const f = +slab.dataset.floor;
-    slab.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const li = floorsLi.find((item) => +item.dataset.floor === f);
-      if (li) li.click();
-      else setFloor(f);
-    });
-    slab.addEventListener('mouseenter', () => {
-      if (!isScrollingProgrammatically) setFloor(f);
-    });
-    slab.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        slab.click();
-      }
-    });
+  // Interactive events for level strip buttons
+  levelBtns.forEach((btn) => {
+    const f = +btn.dataset.floor;
+    btn.addEventListener('click', () => switchFloor(f));
   });
 
-  mm.add('(min-width: 901px) and (prefers-reduced-motion: no-preference)', () => {
-    // Intro stagger when approaching section
-    gsap.from(slabs, {
-      z: 0,
-      opacity: 0.4,
-      stagger: 0.06,
+  // Entrance animation with GSAP if available
+  if (hasGsap && !reduce) {
+    gsap.from('#houseShowcase', {
+      y: 35,
+      opacity: 0,
       duration: 0.8,
       ease: 'power3.out',
       scrollTrigger: {
@@ -422,45 +370,7 @@
         once: true
       }
     });
-
-    // Pinned scroll-through
-    houseST = ScrollTrigger.create({
-      trigger: '.house',
-      start: 'top top',
-      end: '+=130%',
-      pin: '.house__pin',
-      anticipatePin: 1,
-      onUpdate: (self) => {
-        if (isScrollingProgrammatically) return;
-        const p = self.progress;
-        const f = Math.max(0, Math.min(4, 4 - Math.floor(p * 4.99)));
-        if (f !== curFloor) {
-          setFloor(f, true);
-        }
-      }
-    });
-
-    setFloor(4);
-    return () => {
-      if (houseST) {
-        houseST.kill();
-        houseST = null;
-      }
-      gsap.set(slabs, { clearProps: 'all' });
-    };
-  });
-
-  mm.add('(max-width: 900px), (prefers-reduced-motion: reduce)', () => {
-    setFloor(4);
-    floorsLi.forEach((li) => {
-      ScrollTrigger.create({
-        trigger: li,
-        start: 'top 70%',
-        end: 'bottom 70%',
-        onToggle: (s) => s.isActive && setFloor(+li.dataset.floor)
-      });
-    });
-  });
+  }
 
   // Rent receipt
   if (!reduce) {

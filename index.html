@@ -272,62 +272,123 @@
           </ol>
         </div>
         <div class="house__stage">
-          <div class="house__backdrop" aria-hidden="true"></div>
-          <div class="iso" id="iso">
-            <div class="slab" data-floor="0" role="button" tabindex="0" aria-label="Ground Floor: Reception and Laundry">
-              <div class="slab__card">
-                <div class="slab__photo" style="background-image: url(/assets/img/laundry.jpg)"></div>
-                <div class="slab__overlay"></div>
-                <div class="slab__tag">
-                  <span class="slab__badge">GF</span>
-                  <span class="slab__title">Reception & Laundry</span>
+          <div class="house__showcase" id="houseShowcase">
+            <!-- Floor Slides -->
+            <div class="house__slides">
+              <!-- Floor 4 -->
+              <div class="house__slide is-active" data-floor="4">
+                <img src="/assets/img/cityview.jpg" alt="Terrace & Sky Lounge with city view" class="house__img" loading="lazy" />
+                <div class="house__scrim"></div>
+                <div class="house__overlay-top">
+                  <span class="house__badge">4F</span>
+                  <div class="house__overlay-titles">
+                    <h3>Terrace & Sky Lounge</h3>
+                    <span>Top Floor · Open Air</span>
+                  </div>
+                  <span class="house__status-pill">Open 6 AM – 11 PM</span>
+                </div>
+                <div class="house__overlay-bottom">
+                  <div class="house__amenity-chips">
+                    <span>🌅 Sunset Views</span>
+                    <span>☕ Evening Chai Corner</span>
+                    <span>🎸 Acoustic Jams</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floor 3 -->
+              <div class="house__slide" data-floor="3">
+                <img src="/assets/img/room-private.jpg" alt="Private and Studio Room" class="house__img" loading="lazy" />
+                <div class="house__scrim"></div>
+                <div class="house__overlay-top">
+                  <span class="house__badge">3F</span>
+                  <div class="house__overlay-titles">
+                    <h3>Private & Studio Rooms</h3>
+                    <span>Third Floor · Executive Living</span>
+                  </div>
+                  <span class="house__status-pill">Quiet Zone</span>
+                </div>
+                <div class="house__overlay-bottom">
+                  <div class="house__amenity-chips">
+                    <span>🚿 Ensuite Bathroom</span>
+                    <span>💻 Dedicated Study Desk</span>
+                    <span>🫖 Floor Mini Pantry</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floor 2 -->
+              <div class="house__slide" data-floor="2">
+                <img src="/assets/img/room-twin.jpg" alt="Twin Sharing and Women's Floor" class="house__img" loading="lazy" />
+                <div class="house__scrim"></div>
+                <div class="house__overlay-top">
+                  <span class="house__badge">2F</span>
+                  <div class="house__overlay-titles">
+                    <h3>Twin Sharing & Women's Wing</h3>
+                    <span>Second Floor · Community Living</span>
+                  </div>
+                  <span class="house__status-pill">Biometric Access</span>
+                </div>
+                <div class="house__overlay-bottom">
+                  <div class="house__amenity-chips">
+                    <span>🔒 Dual Biometric Safety</span>
+                    <span>👗 Twin Lockable Wardrobes</span>
+                    <span>🪴 Balcony Access</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floor 1 -->
+              <div class="house__slide" data-floor="1">
+                <img src="/assets/img/garden-lounge.jpg" alt="Lounge and Community Kitchen" class="house__img" loading="lazy" />
+                <div class="house__scrim"></div>
+                <div class="house__overlay-top">
+                  <span class="house__badge">1F</span>
+                  <div class="house__overlay-titles">
+                    <h3>Lounge & Community Kitchen</h3>
+                    <span>First Floor · Social Hub</span>
+                  </div>
+                  <span class="house__status-pill">24/7 Common Area</span>
+                </div>
+                <div class="house__overlay-bottom">
+                  <div class="house__amenity-chips">
+                    <span>🍳 Modular Kitchen</span>
+                    <span>📺 85" 4K Screening Lounge</span>
+                    <span>🌿 Co-working & Dining</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floor 0 -->
+              <div class="house__slide" data-floor="0">
+                <img src="/assets/img/laundry.jpg" alt="Reception and Laundry Room" class="house__img" loading="lazy" />
+                <div class="house__scrim"></div>
+                <div class="house__overlay-top">
+                  <span class="house__badge">GF</span>
+                  <div class="house__overlay-titles">
+                    <h3>Reception & Laundry Suite</h3>
+                    <span>Ground Floor · Arrivals & Utilities</span>
+                  </div>
+                  <span class="house__status-pill">24/7 Security</span>
+                </div>
+                <div class="house__overlay-bottom">
+                  <div class="house__amenity-chips">
+                    <span>🛡️ Front Desk Security</span>
+                    <span>🧺 High-Speed Washers</span>
+                    <span>📦 Delivery Parcel Hub</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="slab" data-floor="1" role="button" tabindex="0" aria-label="Floor 1: Lounge and Kitchen">
-              <div class="slab__card">
-                <div class="slab__photo" style="background-image: url(/assets/img/garden-lounge.jpg)"></div>
-                <div class="slab__overlay"></div>
-                <div class="slab__tag">
-                  <span class="slab__badge">1F</span>
-                  <span class="slab__title">Lounge & Kitchen</span>
-                </div>
-              </div>
+
+            <!-- Floor Level Indicator Strip -->
+            <div class="house__levels" role="tablist" aria-label="Floor quick switcher">
+              <button class="house__level is-active" data-floor="4" role="tab" aria-label="Floor 4">4F</button>
+              <button class="house__level" data-floor="3" role="tab" aria-label="Floor 3">3F</button>
+              <button class="house__level" data-floor="2" role="tab" aria-label="Floor 2">2F</button>
+              <button class="house__level" data-floor="1" role="tab" aria-label="Floor 1">1F</button>
+              <button class="house__level" data-floor="0" role="tab" aria-label="Ground Floor">GF</button>
             </div>
-            <div class="slab" data-floor="2" role="button" tabindex="0" aria-label="Floor 2: Twin Sharing">
-              <div class="slab__card">
-                <div class="slab__photo" style="background-image: url(/assets/img/room-twin.jpg)"></div>
-                <div class="slab__overlay"></div>
-                <div class="slab__tag">
-                  <span class="slab__badge">2F</span>
-                  <span class="slab__title">Twin Sharing</span>
-                </div>
-              </div>
-            </div>
-            <div class="slab" data-floor="3" role="button" tabindex="0" aria-label="Floor 3: Private Rooms">
-              <div class="slab__card">
-                <div class="slab__photo" style="background-image: url(/assets/img/room-private.jpg)"></div>
-                <div class="slab__overlay"></div>
-                <div class="slab__tag">
-                  <span class="slab__badge">3F</span>
-                  <span class="slab__title">Private Living</span>
-                </div>
-              </div>
-            </div>
-            <div class="slab is-on" data-floor="4" role="button" tabindex="0" aria-label="Floor 4: Terrace">
-              <div class="slab__card">
-                <div class="slab__photo" style="background-image: url(/assets/img/cityview.jpg)"></div>
-                <div class="slab__overlay"></div>
-                <div class="slab__tag">
-                  <span class="slab__badge">4F</span>
-                  <span class="slab__title">Terrace & Sky</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="house__hint">
-            <span class="house__hint-dot"></span>
-            <span>Hover or click any floor to inspect</span>
           </div>
         </div>
       </div>
